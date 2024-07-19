@@ -26,6 +26,26 @@ function show(){
 }
 show();
 
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+//console.log(functionVar); // Throws ReferenceError
+//console.log(functionLet); // Throws ReferenceError
+//console.log(functionConst); // Throws ReferenceError
+
+{
+    var testVar="a var in block";
+    let testLet="a let in block";
+    const testConst="a const in block";
+
+    testVar="new var in block";
+    testLet="new let in block";
+    //testConst="new const in block";
+    console.log(testVar);
+    console.log(testLet);
+    //console.log(testConst);
+}
+
+    testVar="new var outside block";
+    console.log(testVar);
+    testLet="new let outside block";
+    console.log(testLet);
+    testConst="new const outside block";
+    console.log(testConst);
